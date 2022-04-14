@@ -1,0 +1,31 @@
+package tasks;
+
+
+import fb.pageObjects.LoginPageObjects;
+import net.serenitybdd.screenplay.Performable;
+import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.Open;
+import orange_hrm.pageObjects.HRMLoginPageObjects;
+import orange_hrm.pageObjects.HRMPIMPageObjects;
+
+public class NavigateTo {
+    public static Performable theURL(String urlType) throws Exception {
+        Class url;
+
+        switch(urlType) {
+            case "FB Login":
+                url = LoginPageObjects.class;
+            break;
+            case "HRM Login":
+                url = HRMLoginPageObjects.class;
+                break;
+            case "HRM Employee List":
+                url = HRMPIMPageObjects.class;
+                break;
+            default:
+                throw new Exception("There in no url type: " + urlType);
+        }
+        return Task.where("{0} access the login url",
+                Open.browserOn().the(url));
+    }
+}
