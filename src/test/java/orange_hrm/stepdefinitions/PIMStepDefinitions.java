@@ -21,33 +21,33 @@ public class PIMStepDefinitions {
     public void listResult(Actor actor) throws Exception {
         actor.attemptsTo(VerifyDisplayed.element("Employee List"));
     }
+    @And("{actor} search for new employee")
+    public void filterEmployee(Actor actor) throws Exception{
+        actor.attemptsTo(InputText.onField("employeeName", "Teddy Aditya"), ClickOn.button("Search"));
+    }
     @When("{actor} add new employee with required field only")
     public void addEmployee(Actor actor) throws Exception {
         actor.attemptsTo(
                 ClickOn.button("Add"),
-                InputText.onField("firsName", "Teddy"),
-                InputText.onField("lastname", "Aditya"),
+                InputText.onField("firstName", "Teddy"),
+                InputText.onField("lastName", "Aditya"),
                 ClickOn.button("Save")
         );
     }
+
     @Then("{actor} can see my Personal Details")
     public void personalDetails(Actor actor) throws Exception{
-        actor.attemptsTo(VerifyDisplayed.element("PersonalDetails"));
+        actor.attemptsTo(VerifyDisplayed.element("Personal Details"));
     }
-    @And("{actor} search for new employee")
-    public void filterEmployee(Actor actor) throws Exception{
-        actor.attemptsTo(InputText.onField("employeeName", "Teddy"), ClickOn.button("Search"));
-    }
-
-        @And("{actor} update new employee's middle name")
-        public void updateEmployee(Actor actor) throws Exception {
+    @And("{actor} update new employee's middle name")
+    public void updateEmployee(Actor actor) throws Exception {
         actor.attemptsTo(
                 ClickOn.employeeList(),
                 ClickOn.button("Edit"),
                 InputText.onField("editMiddleName", "Aditya"),
                 ClickOn.button("Save")
         );
-        }
+    }
     @Then("{actor} can see the Personal Details has changed")
     public void updatedEmployee(Actor actor) {
         actor.attemptsTo(Ensure.that(HRMPIMPageObjects.EDIT_MIDDLE_NAME_FIELD).value().isEqualTo("Aditya"));

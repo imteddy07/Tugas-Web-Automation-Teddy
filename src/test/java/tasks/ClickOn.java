@@ -48,13 +48,12 @@ public class ClickOn {
             case "Search" :
                 button = HRMPIMPageObjects.SEARCH_BUTTON;
                 break;
-
             default:
-                throw new Exception("There is no buttonType: " + buttonType);
+                throw new Exception("There is no button type: " + buttonType);
         }
-        WaitUntil.the(button, isVisible()).forNoMoreThan(25).seconds();
+        WaitUntil.the(button, isVisible()).forNoMoreThan(100).seconds();
 
-        return Task.where("{0} click " + buttonType + "button", Click.on(button));
+        return Task.where("{0} click " + buttonType + " button", Click.on(button));
 
     }
 }

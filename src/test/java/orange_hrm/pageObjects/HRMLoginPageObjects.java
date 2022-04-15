@@ -9,6 +9,6 @@ import net.thucydides.core.annotations.DefaultUrl;
                 .locatedBy("#txtUsername");
         public static Target PASSWORD_FIELD = Target.the("password field")
                 .locatedBy("#txtPassword");
-        public static Target LOGIN_BUTTON = Target.the("login button")
-                .locatedBy("#btnlogin");
+        public static Target LOGIN_BUTTON = Target.the("log in button")
+                .locatedBy("#btnLogin");
     }

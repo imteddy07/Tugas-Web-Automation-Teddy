@@ -7,18 +7,17 @@ import net.thucydides.core.annotations.DefaultUrl;
 @DefaultUrl("https://opensource-demo.orangehrmlive.com/index.php/pim/viewEmployeeList")
 public class HRMPIMPageObjects extends PageObject {
     public static Target RESULT_TABLE = Target.the("employee table result").locatedBy("#resultTable");
-    public static Target FIRST_EMPLOYEE_LIST = Target.the("first list of employee").locatedBy("//*[contains(@href, '/index.php/pim/viewEmployee/empNumber/')])[1]");
-    public static Target FIRST_EMPLOYEE_CHECKBOX = Target.the("first list employee")
-            .locatedBy("//td/*[@type='checkbox']");
+    public static Target FIRST_EMPLOYEE_LIST = Target.the("first list of employee").locatedBy("(//*[contains(@href, '/index.php/pim/viewEmployee/empNumber/')])[1]");
+    public static Target FIRST_EMPLOYEE_CHECKBOX = Target.the("first list of employee").locatedBy("//td/*[@type='checkbox']");
 
     public static Target EMPLOYEE_NAME = Target.the("employee name")
-            .locatedBy("empsearch_employee_name_empName");
+            .locatedBy("#empsearch_employee_name_empName");
     public static Target SEARCH_BUTTON = Target.the("search button")
             .locatedBy("#searchBtn");
 
-    public static Target ADD_BUTTON = Target.the("add buttton")
+    public static Target ADD_BUTTON = Target.the("add button")
             .locatedBy("#btnAdd");
-    public static Target SAVE_BUTTON = Target.the("save buttton")
+    public static Target SAVE_BUTTON = Target.the("save button")
             .locatedBy("#btnSave");
     public static Target FIRST_NAME_FIELD = Target.the("first name field")
             .locatedBy("#firstName");
