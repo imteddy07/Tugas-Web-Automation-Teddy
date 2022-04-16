@@ -28,7 +28,7 @@ public class CheckpointStepDefinitions {
 
 
         actor.attemptsTo(
-                Ensure.thatTheCurrentPage().currentUrl().contains("checkpoint")
+                        Ensure.thatTheCurrentPage().currentUrl().contains("checkpoint")
         );
 
     }

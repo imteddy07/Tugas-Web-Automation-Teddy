@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Orange HRM - CRUD Employee Data" skipped="0" tests="1" time="21.22" timestamp="2022-04-15 07:37:45"><testcase name="User delete Orange HRM employee successfully"><error message="There is no button type: OK" type="java.lang.Exception">There is no button type: OK</error><system-err>There is no button type: OK&#13;
-tasks.ClickOn.button(ClickOn.java:52)&#13;
-orange_hrm.stepdefinitions.PIMStepDefinitions.deleteEmployee(PIMStepDefinitions.java:61)&#13;
-✽.I delete new emplyee(file:///C:/DATA/Alterra/Web-Automation-Training-Teddy/src/test/resources/features/orange_hrm/crud.feature:27)&#13;
-</system-err></testcase></testsuite>

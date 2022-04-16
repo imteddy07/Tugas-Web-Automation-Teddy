@@ -39,14 +39,14 @@ public class ClickOn {
             case "Edit" :
                 button = HRMPIMPageObjects.EDIT_BUTTON;
                 break;
+            case "Search" :
+                button = HRMPIMPageObjects.SEARCH_BUTTON;
+                break;
             case "Delete" :
                 button = HRMPIMPageObjects.DELETE_BUTTON;
                 break;
-            case "Ok" :
+            case "OK" :
                 button = HRMPIMPageObjects.OK_BUTTON;
-                break;
-            case "Search" :
-                button = HRMPIMPageObjects.SEARCH_BUTTON;
                 break;
             default:
                 throw new Exception("There is no button type: " + buttonType);
